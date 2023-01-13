@@ -6,7 +6,7 @@ const app = express();
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const { SMTP, PORT, USER, PASS, FROM } = require("./config.json");
-var port = 240
+var port = 80
 
 let transporter = nodemailer.createTransport({
   host: SMTP,
