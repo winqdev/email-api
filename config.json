@@ -1,0 +1,6 @@
+{
+    "SMTP": "<smtp.google.com> - example",
+    "PORT": 465,
+    "USER": "<myemail@gmail.com> - example",
+    "PASS": "<password>"
+}
