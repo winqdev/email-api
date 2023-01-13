@@ -41,19 +41,11 @@ app.post("/send/:to/:subject", async (request, response) => {
     return
   }
 
-  /* const receiver = request.params.to
-  const fixedr = receiver.replace("-", "@") */
-
   let result = await transporter.sendMail({
     from: '"API" <youremail@gmail.com>',
-    to: request.params.to, //'vburuiana60@gmail.com'
-    subject: request.params.subject, //'Message from Node js'
-    text: request.body.text || "No text provided in body!", //'This message was sent from Node js server.'
-    /* attachments: [
-      {
-      path: "./kchau.jpg"
-      }
-    ] */
+    to: request.params.to,
+    subject: request.params.subject,
+    text: request.body.text || "No text provided in body!",
   })
   response.send(`Sent!`)
 })
